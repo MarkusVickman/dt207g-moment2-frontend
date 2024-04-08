@@ -19,8 +19,11 @@
     <!--Huvudsidan med en todo-lista-->
     <main id="main">
         <h1>Todo-lista</h1>
+
+
+
         <!--Formulär för att skriva in todos som lagras till localstorage.-->
-        <form id="form">
+     <!--   <form id="form">
             <label for="task"></label><br>
             <textarea id="task" name="task" placeholder="Skriv din nya todo här...."></textarea>
             <br>
@@ -31,11 +34,38 @@
                 <option value=2>2</option>
                 <option value=3>3</option>
             </select>
-            <br>
+            <br>    -->
             <!--Knappar för submit och rensa hela todo-listan-->
-            <button type="submit" class="inline">Spara</button>
+    <!--        <button type="submit" class="inline">Spara</button>
             <button type="button" id="empty-localstorage" class="inline">Radera listan</button>
         </form>
+    -->
+
+        <form id="form">
+            <label for="company_name">Företagsnamn:</label><br>
+            <input type="text" id="company_name" required>
+            <br>
+            <label for="job_title">Kursnamn:</label><br>
+            <input type="text" id="job_title" required>
+            <br>
+            <label for="location">Progression:</label><br>
+            <input type="text" id="location" required>
+            <br>
+            <label for="start_date">Länk till kursplan</label><br>
+            <input type="text" id="start_date">
+            <br>
+            <label for="end_date">Länk till kursplan</label><br>
+            <input type="text" id="end_date">
+            <br>
+            <label for="description">Länk till kursplan</label><br>
+            <input type="text" id="description">
+            <br>
+            <button type="submit">Spara</button>       
+            <button type="button" id="empty-localstorage">Radera listan</button>
+        </form>
+
+
+
         <!--Centrerar kategorivalen-->
         <div class="center">
             <div id="todo-btn">Kvar att göra</div>

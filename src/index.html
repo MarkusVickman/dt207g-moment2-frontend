@@ -18,40 +18,19 @@
 <body>
     <!--Huvudsidan med en todo-lista-->
     <main id="main">
-        <h1>Todo-lista</h1>
-        <!--Formulär för att skriva in todos som lagras till localstorage.-->
-        <form id="form">
-            <label for="task"></label><br>
-            <textarea id="task" name="task" placeholder="Skriv din nya todo här...."></textarea>
-            <br>
-            <label for="priority">Prioritet:</label>
-            <select id="priority" name="priority">
-                <option value="" selected disabled hidden>.</option>
-                <option value=1>1</option>
-                <option value=2>2</option>
-                <option value=3>3</option>
-            </select>
-            <br>
-            <!--Knappar för submit och rensa hela todo-listan-->
-            <button type="submit" class="inline">Spara</button>
-            <button type="button" id="empty-localstorage" class="inline">Radera listan</button>
-        </form>
+        <h1>CV-listan</h1>
         <!--Centrerar kategorivalen-->
         <div class="center">
-            <div id="todo-btn">Kvar att göra</div>
-            <div id="completed-btn">Avklarade</div>
+            <div class="underlined" id="cv-btn">Ditt CV</div>
+            <div id="add-btn">Lägg till</div>
+            <div id="about-btn">Om sidan</div>
         </div>
         <!--Linje för stil-->
         <div id="line"></div>
         <!--För att skriva ut todo som är aktiva-->
         <article id="todo-article">
-            <h2>Kvar att göra</h2>
-            <div id="todo-div"></div>
-        </article>
-        <!--För att skriva ut todo som är avklarade-->
-        <article id="completed-article">
-            <h2>Avklarade</h2>
-            <div id="todo-completed"></div>
+            <h2>Ditt CV</h2>
+            <div id="cv-div"></div>
         </article>
     </main>
 </body>

@@ -112,7 +112,7 @@ option{
 }
 
 /*Knappar för att välja lista för ofärdiga eller färdiga todos*/
-#todo-btn, #completed-btn{
+#cv-btn, #add-btn, #about-btn{
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 10px;
@@ -122,12 +122,12 @@ option{
 }
 
 /*Startstiling för färdiga todos. Ändras med script*/
-#todo-btn{
+.underlined{
     text-decoration: underline;
 }
 
 /*Knappar för att välja lista för ofärdiga eller färdiga todos*/
-#todo-btn:hover, #completed-btn:hover{
+#cv-btn:hover, #add-btn:hover, #about-btn:hover{
     background-color: white;
 }
 
