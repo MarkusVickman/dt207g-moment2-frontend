@@ -1,5 +1,6 @@
 const form = document.getElementById("form");
 const alert = document.getElementById("alert");
+const alert2 = document.getElementById("alert2");
 import { apiPost } from './api.js';
 
 // Lägg till händelselyssnare på formuläret
@@ -15,11 +16,8 @@ form.addEventListener("submit", (e) => {
 
     //Letar fel i formuläret med errorCheck funktionen. Utan fel så skapas ett object som skickas till funktionen för POST-anrop
     if(errorCheck(companyName, jobTitle, location, startDate, endDate, description)){
-        alert2.innerHTML = "Ditt inlägg lagras nu i databasen och går att se på startsidan.";
         alert.innerHTML = "";
-
         const cv = {companyName:companyName, jobTitle:jobTitle, location:location, startDate:startDate, endDate:endDate, description:description};
-
         apiPost(cv);
     }
 });
