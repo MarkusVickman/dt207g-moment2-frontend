@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DT208G Moment 2</title>
+    <title>CV-listan | Om sidan</title>
     <!--Länk till script-fil-->
     <script src="js/api.js" type="module"></script>
     <!--Länk till css-fil-->
@@ -13,45 +13,37 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <!--Favicon-->
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="favicon.ico?ver=2.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
 </head>
 
 <body>
+    <header>
+        <h1>CV-listan</h1>
+        <!--Centrerar kategorivalen-->
+        <nav class="center">
+            <ul>
+                <a href="index.html">
+                    <li id="cv-btn">Ditt CV</li>
+                </a>
+                <a href="add.html">
+                    <li id="add-btn">Lägg till</li>
+                </a>
+                <a href="about.html">
+                    <li class="underlined" id="about-btn">Om sidan</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
     <!--Huvudsidan med en todo-lista-->
     <main id="main">
-        <h1>Todo-lista</h1>
-        <!--Formulär för att skriva in todos som lagras till localstorage.-->
-        <form id="form">
-            <label for="task"></label><br>
-            <textarea id="task" name="task" placeholder="Skriv din nya todo här...."></textarea>
-            <br>
-            <label for="priority">Prioritet:</label>
-            <select id="priority" name="priority">
-                <option value="" selected disabled hidden>.</option>
-                <option value=1>1</option>
-                <option value=2>2</option>
-                <option value=3>3</option>
-            </select>
-            <br>
-            <!--Knappar för submit och rensa hela todo-listan-->
-            <button type="submit" class="inline">Spara</button>
-            <button type="button" id="empty-localstorage" class="inline">Radera listan</button>
-        </form>
-        <!--Centrerar kategorivalen-->
-        <div class="center">
-            <div id="todo-btn">Kvar att göra</div>
-            <div id="completed-btn">Avklarade</div>
-        </div>
         <!--Linje för stil-->
         <div id="line"></div>
         <!--För att skriva ut todo som är aktiva-->
         <article id="todo-article">
-            <h2>Kvar att göra</h2>
-            <div id="todo-div"></div>
-        </article>
-        <!--För att skriva ut todo som är avklarade-->
-        <article id="completed-article">
-            <h2>Avklarade</h2>
-            <div id="todo-completed"></div>
+            <h2>Ditt CV</h2>
+            <div id="cv-div"></div>
         </article>
     </main>
 </body>

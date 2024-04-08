@@ -28,9 +28,10 @@ async function api(url) {
 
 api(url);
 */
-api();
 
-async function api() {
+apiGet();
+
+async function apiGet() {
       let response = await fetch('http://localhost:3000/api/cv', {
             method: 'GET',
             headers: {
@@ -41,4 +42,20 @@ async function api() {
 
       let data = await response.json();
       console.log(data);
+}
+
+apiPost();
+
+export async function apiPost(cv) {
+     /* let response = await fetch('http://localhost:3000/api/add', {
+            method: 'GET',
+            headers: {
+                  'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(cv)
+      });
+
+      let data = await response.json();
+      console.log(data);*/
+      console.log(cv);
 }
