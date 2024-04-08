@@ -41,7 +41,6 @@ export async function apiGet() {
       });
 
       let data = await response.json();
-      console.log(data);
       return data;
 }
 
@@ -67,6 +66,5 @@ export async function apiDELETE(cv) {
             body: JSON.stringify(cv)
       });
       let data = await response.json();
-      console.log(data);
       alert2.innerHTML = "Ditt inlägg är nu lagrat i databasen och går att se på startsidan.";
 }
