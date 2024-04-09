@@ -13,7 +13,7 @@
     <!--Länk till google-fonts typsnitt-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <!--Favicon-->
     <link rel="icon" type="image/x-icon" sizes="16x16" href="favicon.ico?ver=2.0">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
@@ -25,28 +25,18 @@
         <!--Centrerar kategorivalen-->
         <nav class="center">
             <ul>
-                <a href="index.html">
-                    <li id="cv-btn">Ditt CV</li>
-                </a>
-                <a href="add.html">
-                    <li class="underlined" id="add-btn">Lägg till</li>
-                </a>
-                <a href="about.html">
-                    <li id="about-btn">Om sidan</li>
-                </a>
+                <a href="index.html"><li id="cv-btn">Ditt CV</li></a>
+                <a href="add.html"><li class="underlined" id="add-btn">Lägg till</li></a>
+                <a href="about.html"><li id="about-btn">Om sidan</li></a>
             </ul>
         </nav>
     </header>
-    <!--Huvudsidan med en todo-lista-->
+    <!--Huvudsidan med ett formulär-->
     <main id="main">
         <!--Linje för stil-->
         <div id="line"></div>
-        <!--För att skriva ut todo som är aktiva-->
-        <article id="todo-article">
-            <h2>Ditt CV</h2>
-            <div id="cv-div"></div>
-        </article>
-
+        <!--Formulär för CV-->
+        <h2>Nytt CV-inlägg</h2>
         <form id="form">
             <label for="company_name">Företagsnamn:</label><br>
             <input type="text" id="company_name">
@@ -68,7 +58,6 @@
             <br>
             <button id="submit" type="submit">Spara</button>
         </form>
-
              <!--Meddelande för när formuläret oven fyllts i-->
              <p id="alert"></p>
              <p id="alert2"></p>

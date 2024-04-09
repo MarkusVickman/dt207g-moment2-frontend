@@ -1,17 +1,19 @@
+//fil för att skriva ut från servern/databasen till webplatsens startsida
+//din där cv-data ska skrivas ut
 const cvDiv = document.getElementById("cv-div");
 import { apiGet } from './api.js';
 
-writeCvToHtml();
+//När sidan laddas 
+window.onload = writeCvToHtml();
 
-async function writeCvToHtml() {
-
-    //Hämtar arrayen med todos
-    // Anropa funktionen
+//Initieras vis start och efter att ett inlägg tagits bort från webbplatsen
+export async function writeCvToHtml() {
+    // Anropa funktionen för att hämta data och väntar på svar
     let cvArray = await apiGet();
 
-    console.log(cvArray);
     //Rensar html
     cvDiv.innerHTML = "";
+    
     //Om arrayen inte är tom byggs innehållet upp utifrån arrayen. 
     if (cvArray.length > 0) {
         for (let i = 0; i < cvArray.length; i++) {
@@ -19,15 +21,15 @@ async function writeCvToHtml() {
             newDiv.classList.add(`cv-post`);
             newDiv.innerHTML = `
                 <h3>${cvArray[i].COMPANY_NAME}</h3>
-                <H4>${cvArray[i].JOB_TITLE}</H4>
-                <p>${cvArray[i].LOCATION}</p>
-                <p>${cvArray[i].DESCRIPTION}</p>
-                <p class="inline">Anställd mellan: ${cvArray[i].START_DATE} och ${cvArray[i].END_DATE}</p>
-                <button id="${cvArray[i].ID}" class="remove-todo">Ta bort</button>
+                <H4><bold>Arbetstitel:</strong> ${cvArray[i].JOB_TITLE}</H4>
+                <p><strong>Ort:</strong> ${cvArray[i].LOCATION}</p>
+                <p><strong>Beskrivning:</strong>  ${cvArray[i].DESCRIPTION}</p>
+                <p>Anställd: ${cvArray[i].START_DATE.slice(0, 10)} - ${cvArray[i].END_DATE.slice(0, 10)}</p>
+                <button id="${cvArray[i].ID}" class="remove-cv">Ta bort</button>
                 `;
             cvDiv.appendChild(newDiv);
         }
     } else {
-        console.log("Funkionen för att skriva ut kördes");
+        
     }
 };

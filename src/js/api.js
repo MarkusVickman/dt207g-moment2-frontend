@@ -1,49 +1,22 @@
-let url = "localhost:3000/api/cv";
-const alert = document.getElementById("alert");
+//Fil med fetch-anrop
+
+//Läser in variabel med ett element där meddelanden ska visas
 const alert2 = document.getElementById("alert2");
 
-
-/*funktionen som gör alla api-anrop med async await. Nykeln är en variabel i global scope. url och hostadresser skickas in i funktionen när den anropas.*/
-/*async function api(url) {
-      const response = await fetch(url);
-
-      const result = await response.json();
-        console.log(result);  
-  }
-
-  api(url);
-*/
-
-/*
-async function api(url) {
-      try {
-            const response = await fetch(url);
-            const result = await response.json();
-            console.log(result);
-
-      } catch (error) {
-            console.error(error);
-      }
-}
-
-api(url);
-*/
-
-//apiGet();
-
+//Get fetch-anrop för att hämta array med cv
 export async function apiGet() {
       const url = 'http://localhost:3000/api/cv';
       try {
             const response = await fetch(url);
             const result = await response.json();
-            /**/
-            //console.log(result);
+            //returnerar json-data till funktionen writeCvToHtml()
             return result;
       } catch (error) {
             console.error(error);
       }
 }
 
+//Post fetch-anrop som tar in ett objekt som parameter
 export async function apiPost(cv) {
       let response = await fetch('http://localhost:3000/api/add', {
             method: 'POST',
@@ -53,10 +26,11 @@ export async function apiPost(cv) {
             body: JSON.stringify(cv)
       });
       let data = await response.json();
-      console.log(data);
+      //När det är klart skrivs ett meddelande ut på skärmen att inlägget är sparat
       alert2.innerHTML = "Ditt inlägg är nu lagrat i databasen och går att se på startsidan.";
 }
 
+//Delete fetch-anrop som tar in ett id/index som skickas med till servern för att tas bort från databasen 
 export async function apiDelete(id) {
       let response = await fetch(`http://localhost:3000/api/delete/${id}`, {
             method: 'DELETE',
@@ -65,6 +39,7 @@ export async function apiDelete(id) {
             },
             body: JSON.stringify()
       });
-      //let data = await response.json();
-      alert2.innerHTML = `Inlägg ${id}är nu lagrat i databasen och går att se på startsidan.`;
+      //Väntar på data och först när den finns görs en retur till funktionen removeCV(id) där den väntar på svar
+      let data = await response.json(); 
+      return data;
 }
