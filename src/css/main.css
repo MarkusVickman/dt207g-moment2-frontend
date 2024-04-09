@@ -1,13 +1,11 @@
 /*Allmän styling*/
-*{
+* {
     box-sizing: border-box;
-    font-family: "Gloria Hallelujah", cursive;
-    font-weight: 400;
-    font-style: normal;
+    font-family: "Josefin Sans", sans-serif;
 }
 
 /*Allmän styling*/
-body{
+body {
     background-color: rgb(248, 246, 240);
     color: black;
     text-align: left;
@@ -16,123 +14,49 @@ body{
 }
 
 /*begränsar vidd på main*/
-main{
-    width: 500px;
+main {
+    width: 700px;
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
 
 /*Centrerar rubriker*/
-h1, h2{
+h1,
+h2 {
     text-align: center;
 }
 
-/*Styling av element i inläggen*/
-.inline{
-    display: inline-block;
-    position: relative;
-    bottom: -15px;
-}
-
-/*centreringsdiv till kategorivals-knapparna*/
-.center{
-    margin-left: auto;
-    margin-right: auto;
-    width: 300px;
-}
-
-/*responsivt formulär*/
-form{
-    width: 300px;
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 70px;
-    padding-top: 0px;
-    text-align: center;
-}
-
-/*textarea i formuläret*/
-#task{
-    width: 300px;
-    max-width: 100%;
-    height: 80px;
-    margin-bottom: 10px;
-}
-
-/*option i formulär*/
-option{
-    font-size: 1.1em;
-}
-
-/*Styling av linje under kategorival*/
-#line{
-    height: 2px;
-    width: 100%;
-    background-color: black;
-    margin-top: 10px;
-}
-
-/*Artikel för färdiga inlägg*/
-#completed-article{
-    display: none;
-}
-
-/*Styling av marginal mellan pri och färdig i varhe inlägg*/
-.priority{
-    margin-right: 50px;
-    position: relative;
-}
-
-/*styling av div till inläggen*/
-.priority1, .priority2, .priority3{
-    background-color:  rgba(0, 0, 0, 0.8);
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    color: white;
-    max-width: 450px;
-    box-shadow: 3px 3px 3px rgb(0, 0, 0, 0.2);
-    overflow: hidden;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/*hover effekt*/
-.priority1:hover, .priority2:hover, .priority3:hover{
-    background-color:  rgba(0, 0, 0, 0.9);
-    box-shadow: 3px 3px 3px rgb(0, 0, 0, 0.4);
-}
-
-/*Tar bort marginaler för priority p*/
-.priority1 p, .priority2 p, .priority3 p{
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-
-/*Knappar för att välja lista för ofärdiga eller färdiga todos*/
-#todo-btn, #completed-btn{
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 20px;
-    display: inline-block;
-}
-
-/*Startstiling för färdiga todos. Ändras med script*/
-#todo-btn{
+/*Styling till rubriker i cv-inläggen*/
+h3 {
     text-decoration: underline;
 }
 
-/*Knappar för att välja lista för ofärdiga eller färdiga todos*/
-#todo-btn:hover, #completed-btn:hover{
-    background-color: white;
+/*"tar bort" styling vid besökta länkar i navigeringen*/
+nav a:visited {
+    color: black;
+}
+
+/*menu ul*/
+ul{
+    padding-left: 0;
+}
+
+/*centreringsdiv till meny-knapparna*/
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    width: 342px;
+    max-width: 100%;
+}
+
+/*för menyknappar för att visa aktiv sida*/
+.underlined {
+    text-decoration: underline;
 }
 
 /*Styling av knappar*/
-button{
+button {
     background-color: rgb(255, 255, 255);
     padding: 5px;
     border-radius: 10px;
@@ -142,30 +66,133 @@ button{
     margin-left: 5px;
     margin-right: 5px;
     /*För att knapptext ska visas korrekt i safari på iphone*/
-    -webkit-text-fill-color:black;
+    -webkit-text-fill-color: black;
     margin-top: 10px;
     display: block;
 }
 
 /*Hover effekt till knappar*/
-button:hover{
+button:hover {
     background-color: rgb(201, 214, 223);
     box-shadow: 3px 3px 3px rgb(0, 0, 0, 0.4);
 }
 
-/*Styling av knapp för att tömma listan*/
-#empty-localstorage{
-    background-color: rgb(255, 183, 183);
-}
-
-/*Styling av knapp för att tömma listan*/
-#empty-localstorage:hover, .remove-todo:hover{
+/*Styling av delete-knapp för cv-inlägg*/
+.remove-cv:hover{
     background-color: rgb(255, 137, 137);
     box-shadow: 3px 3px 3px rgb(0, 0, 0, 0.4);
 }
 
-/*Styling av ta bort knapparna till varje inlägg*/
-.remove-todo{
-    float: right;
-    bottom: 0px;
+/*Meny-knappar*/
+#cv-btn,
+#add-btn,
+#about-btn {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+/*Meny-knappar*/
+#cv-btn:hover,
+#add-btn:hover,
+#about-btn:hover {
+    background-color: white;
+}
+
+/*Styling av linje under menyn*/
+#line {
+    height: 2px;
+    width: 100%;
+    background-color: black;
+    margin-top: 10px;
+}
+
+/*responsivt formulär*/
+form {
+    width: 300px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    padding-top: 0px;
+    text-align: center;
+}
+
+/*textarea i formuläret*/
+#description {
+    width: 500px;
+    max-width: 100%;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+/*centrering submit-knapp*/
+#submit {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*styling av div till cv-inläggen*/
+.cv-post {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    color: white;
+    max-width: 700px;
+    box-shadow: 3px 3px 3px rgb(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*hover effekt av div till cv-inläggen*/
+.cv-post:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 3px 3px 3px rgb(0, 0, 0, 0.4);
+}
+
+/*textstyling för att visa notiser på sidorna*/
+#alert {
+    color: rgb(213, 4, 4);
+}
+
+/*textstyling för att visa notiser på sidorna*/
+#alert2 {
+    color: green;
+}
+
+/*Media querie för extra små skärmar*/
+@media screen and (max-width: 300px) {
+
+    /*centreringsdiv till meny-knapparna*/
+    .center {
+        width: 250px;
+    }
+    
+    /*Meny-knappar*/
+    #cv-btn,
+    #add-btn,
+    #about-btn {
+        padding: 5px;
+    }
+    }
+
+    /*Media querie för extra små skärmar*/
+@media screen and (min-width: 300px) and (max-width: 355px) {
+
+    /*centreringsdiv till meny-knapparna*/
+    .center {
+        width: 280px;
+    }
+
+    /*Meny-knappar*/
+    #cv-btn,
+    #add-btn,
+    #about-btn {
+        padding: 10px;
+    }
 }
