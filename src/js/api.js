@@ -58,12 +58,12 @@ export async function apiPost(cv) {
 }
 
 export async function apiDelete(id) {
-      let response = await fetch(`http://localhost:3000/api/delete:${id}`, {
+      let response = await fetch(`http://localhost:3000/api/delete/${id}`, {
             method: 'DELETE',
             headers: {
                   'Content-Type': 'application/json'
             },
-            //body: JSON.stringify(cv)
+            body: JSON.stringify()
       });
       //let data = await response.json();
       alert2.innerHTML = `Inlägg ${id}är nu lagrat i databasen och går att se på startsidan.`;
