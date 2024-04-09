@@ -5,7 +5,7 @@ const alert2 = document.getElementById("alert2");
 
 //Get fetch-anrop för att hämta array med cv
 export async function apiGet() {
-      const url = 'http://localhost:3000/api/cv';
+      const url = 'https://dt207g-moment2-api.azurewebsites.net/api/cv';
       try {
             const response = await fetch(url);
             const result = await response.json();
@@ -18,7 +18,7 @@ export async function apiGet() {
 
 //Post fetch-anrop som tar in ett objekt som parameter
 export async function apiPost(cv) {
-      let response = await fetch('http://localhost:3000/api/add', {
+      let response = await fetch('https://dt207g-moment2-api.azurewebsites.net/api/add', {
             method: 'POST',
             headers: {
                   'Content-Type': 'application/json'
@@ -32,7 +32,7 @@ export async function apiPost(cv) {
 
 //Delete fetch-anrop som tar in ett id/index som skickas med till servern för att tas bort från databasen 
 export async function apiDelete(id) {
-      let response = await fetch(`http://localhost:3000/api/delete/${id}`, {
+      let response = await fetch(`https://dt207g-moment2-api.azurewebsites.net/api/delete/${id}`, {
             method: 'DELETE',
             headers: {
                   'Content-Type': 'application/json'
