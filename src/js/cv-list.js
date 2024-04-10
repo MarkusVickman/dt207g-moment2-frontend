@@ -13,7 +13,7 @@ export async function writeCvToHtml() {
 
     //Rensar html
     cvDiv.innerHTML = "";
-    if (cvArray !== "false") {
+
         //Om arrayen inte är tom byggs innehållet upp utifrån arrayen. 
         if (cvArray.length > 0) {
             for (let i = 0; i < cvArray.length; i++) {
@@ -32,5 +32,4 @@ export async function writeCvToHtml() {
         } else {
 
         }
-    }
 };
