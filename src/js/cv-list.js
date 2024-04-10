@@ -13,13 +13,13 @@ export async function writeCvToHtml() {
 
     //Rensar html
     cvDiv.innerHTML = "";
-    
-    //Om arrayen inte är tom byggs innehållet upp utifrån arrayen. 
-    if (cvArray.length > 0) {
-        for (let i = 0; i < cvArray.length; i++) {
-            let newDiv = document.createElement("div");
-            newDiv.classList.add(`cv-post`);
-            newDiv.innerHTML = `
+
+        //Om arrayen inte är tom byggs innehållet upp utifrån arrayen. 
+        if (cvArray.length > 0) {
+            for (let i = 0; i < cvArray.length; i++) {
+                let newDiv = document.createElement("div");
+                newDiv.classList.add(`cv-post`);
+                newDiv.innerHTML = `
                 <h3>${cvArray[i].COMPANY_NAME}</h3>
                 <H4><bold>Arbetstitel:</strong> ${cvArray[i].JOB_TITLE}</H4>
                 <p><strong>Ort:</strong> ${cvArray[i].LOCATION}</p>
@@ -27,9 +27,9 @@ export async function writeCvToHtml() {
                 <p>Anställd: ${cvArray[i].START_DATE.slice(0, 10)} - ${cvArray[i].END_DATE.slice(0, 10)}</p>
                 <button id="${cvArray[i].ID}" class="remove-cv">Ta bort</button>
                 `;
-            cvDiv.appendChild(newDiv);
+                cvDiv.appendChild(newDiv);
+            }
+        } else {
+
         }
-    } else {
-        
-    }
 };
