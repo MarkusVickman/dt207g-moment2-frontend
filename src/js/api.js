@@ -13,6 +13,7 @@ export async function apiGet() {
             return result;
       } catch (error) {
             console.error(error);
+            return false;
       }
 }
 
