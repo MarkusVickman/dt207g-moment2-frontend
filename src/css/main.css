@@ -37,6 +37,10 @@ nav a:visited {
     color: black;
 }
 
+nav a{
+    text-decoration: none;
+}
+
 /*menu ul*/
 ul{
     padding-left: 0;
