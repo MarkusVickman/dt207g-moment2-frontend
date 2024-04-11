@@ -10,7 +10,7 @@ body {
     color: black;
     text-align: left;
     font-size: 1.1em;
-    line-height: 1.3em;
+    line-height: 1.5em;
 }
 
 /*begränsar vidd på main*/
@@ -43,7 +43,7 @@ nav a{
 }
 
 /*menu ul*/
-ul{
+nav ul{
     padding-left: 0;
 
     list-style-type: none;
