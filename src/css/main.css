@@ -105,6 +105,7 @@ button:hover {
     padding-bottom: 10px;
     border-radius: 20px;
     display: inline-block;
+    color: black;
 }
 
 /*Meny-knappar*/
@@ -112,6 +113,7 @@ button:hover {
 #add-btn:hover,
 #about-btn:hover {
     background-color: white;
+    cursor: pointer;
 }
 
 /*Styling av linje under menyn*/
