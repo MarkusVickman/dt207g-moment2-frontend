@@ -37,7 +37,23 @@
         <!--Information om sidan-->
         <article id="about">
             <h2>Om CV-listan</h2>
-            <p></p>
+            <p>På den här webbplatsen kan du lagra ditt CV i form av anställningar med Företagsnamn, arbetstitel, ort, start och sluttid 
+                för anställningen samt en längre beskrivning av arbetet. Inläggen sparas i en databas med hjälp av ett api. Inläggen 
+                ligger synligt för alla som använder sidan och skriv därför inte in känslig information.</p>
+            <p>webbplatsen är en del av uppgiften i kursen backend-baserad webbutveckling som går ut på att skapa ett api 
+                i en expresserver som kan hantara Fetch-anrop med get, post, put och delete. Denna api ska också kunna skicka 
+                förfrågningar till en sql-databas och skicka vidare svaren till denna webbplats. Så här har jag löst det:</p>
+                <ul>
+                    <li>Jag har skapat en MariaDB-databas som är hostad hos HelioHost.</li>
+                    <li>Node.js, expresserver hostad hos Azure som vid Fetch-anrop skickar frågor till databasen och svarar webbplatsen. Tillägg för mySQL används för att ansluta till databasen.</li>
+                    <li>Denna webbplats hostad hos Netlify för att visa funktionen hos api och som skickar anropen get för att hämta cv, post för att skapa nya från formuläret och delete för att ta bort enskilda inlägg.</li>
+                </ul>
+            <p>En mer ingående beskrivning av api-funktionerna och hur den används hittar du <a href="https://github.com/MarkusVickman/dt207g-moment2/README.md">här.</a></p>
+            <h4>Sammanfattning</h4>
+            <p>Det känns som användbart med apier och det går smidigt att på ett säkert sätt nå databaser. Det är lite klurigt hur promise hanteras och det har varit svårt att få anslutningen till databasen att bli pålitlig då 
+                den efter en stund blivit inaktiv. Men överlag gick det snabbt att skapa en express-api och jag tycker att felhanteringen var det klurigaste. Att skapa lösningen för mariaDB-databasen var enkelt. Publicering gick 
+                smidigt förutom på Azure där jag hade lite svårare att förstå hur jag skulle göra. Allt som allt en lärorik upplevelse. 
+            </p>
         </article>
     </main>
 </body>
