@@ -44,7 +44,14 @@ nav a{
 /*menu ul*/
 ul{
     padding-left: 0;
+
+    list-style-type: none;
 }
+
+nav li{
+    display: inline-block;
+}
+
 
 /*centreringsdiv till meny-knapparna*/
 .center {
