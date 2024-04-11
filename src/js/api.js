@@ -1,6 +1,7 @@
 //Fil med fetch-anrop
 
 //Läser in variabel med ett element där meddelanden ska visas
+const alert = document.getElementById("alert");
 const alert2 = document.getElementById("alert2");
 
 //Get fetch-anrop för att hämta array med cv
@@ -10,8 +11,10 @@ export async function apiGet() {
             const response = await fetch(url);
             const result = await response.json();
             //returnerar json-data till funktionen writeCvToHtml()
+            alert.innerHTML = "";
             return result;
       } catch (error) {
+            alert.innerHTML = "Inläggen kunde inte laddas in.";
             console.error(error);
       }
 }
